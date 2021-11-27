@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格跨行跨列</title>
+</head>
+<body>
+
+<!--    colspan  跨列
+        rowspan  跨行   -->
+
+
+<!-- 需求1，新建一个五行，五列的表格，第一行，第一列的单元格要跨两列，第二行第一列的单元格跨两行，第四行第四列的单元格跨两行两列。-->
+  <table border="1" width="500" height="500" cellspacing="0">
+    <tr>
+      <th colspan="2">asd</th>
+      <th>asd</th>
+      <th>asd</th>
+      <th>asd</th>
+    </tr>
+    <tr>
+      <td rowspan="2">asd</td>
+      <td>asd</td>
+      <td>asd</td>
+      <td>asd</td>
+      <td>asd</td>
+    </tr>
+    <tr>
+
+      <td>asd</td>
+      <td>asd</td>
+      <td>asd</td>
+      <td>asd</td>
+    </tr>
+    <tr>
+      <td>asdf</td>
+      <td>asd</td>
+      <td>asd</td>
+      <td colspan="2" rowspan="2">asd</td>
+
+    </tr>
+    <tr>
+      <td>asda</td>
+      <td>asd</td>
+      <td>asd</td>
+
+    </tr>
+  </table>
+
+</body>
+</html>

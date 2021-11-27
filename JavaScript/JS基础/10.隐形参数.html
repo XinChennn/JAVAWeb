@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+ /*   函数的arguments隐形参数（只在function函数内)
+    就是在 function函数中不需要定义，但却可以直接用来获取所有参数的交量。我们首它叫隐形参数。赊形参数特别像 jawa基础的可变长参数一样。
+public vold fun( Object ...args )
+    可变长参数其实是一个数组。
+那么js中的隐形参数也跟java的可变长参数一样。操作类似数组。*/
+
+
+    function fun(){
+      // alert(arguments.length) //可看参数个数
+
+      /*alert(arguments[0])  //通过下标获取参数
+      alert(arguments[1])
+      alert(arguments[2])*/
+
+      //遍历参数
+      for (var i = 0; i < arguments.length; i++) {
+        alert(arguments[i])
+      }
+
+      alert("无参函数fun()")
+    }
+
+    // fun(1,"asd",true)
+
+    function sum(num1,num2) {
+      var result=0;
+      for (var i = 0; i < arguments.length; i++) {
+        //排除不是num类型的数据
+        if (typeof(arguments[i]) == "number"){
+          result +=arguments[i]
+        }
+      }
+      return result;
+    }
+    alert( sum(1,2,"ab",3,7) )
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
