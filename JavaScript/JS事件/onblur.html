@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+        //静态注册失去焦点事件
+      function onblurfun(){
+          //控制台  ,log()是打印的方法
+          console.log("静态注册失去焦点事件")
+      }
+
+      //动态注册onblur事件
+        window.onload = function (){
+          var pwd = document.getElementById("pwd")
+            // alert(pwd) //[object HTMLInputElement]
+            pwd.onblur = function (){
+              console.log("动态注册失去焦点事件")
+            }
+        }
+  </script>
+</head>
+<body>
+    用户名:<input type="text" onblur="onblurfun()"><br/>
+    密码:<input id="pwd" type="text" ><br/>
+</body>
+</html>
