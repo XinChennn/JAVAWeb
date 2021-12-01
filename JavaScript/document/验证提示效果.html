@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    function onclickFun(){
+      var getId = document.getElementById("username");
+      var value = getId.value;
+      var patt=/^\w{5,12}$/  //正则表达式  5-12位的数字 字母 下划线
+
+      var uspan = document.getElementById("uspan");
+      // innerHTML 表示起始标签和结束标签里的内容
+      // innerHTML 这个属性可读可写
+      
+      if(patt.test(value)){
+        uspan.innerHTML = "<img src=\"right.png\" width=\"18\">";
+      }else{
+        uspan.innerHTML = "<img src=\"wrong.png\" width=\"20\">";
+      }
+    }
+  </script>
+</head>
+<body>
+  用户名<input type="text" id="username"/>
+  <button onclick="onclickFun()">验证</button>
+  <span id="uspan" style="color: red"></span>
+
+</body>
+</html>
