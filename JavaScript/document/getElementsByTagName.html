@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+    function funAll() {
+      //getElementsByTagName() 通过标签属性获取对象
+      var tagName = document.getElementsByTagName("input");
+      for (var i = 0; i < tagName.length; i++) {
+        tagName[i].checked = true;
+      }
+    }
+
+  </script>
+</head>
+<body>
+  兴趣爱好：
+  <input type="checkbox" value="cpp">C++
+  <input type="checkbox" value="java">Java
+  <input type="checkbox" value="js">JavaScript
+  <br/>
+  <button onclick="funAll()">全选</button>
+
+</body>
+</html>
