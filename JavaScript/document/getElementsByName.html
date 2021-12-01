@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+    function funAll() {
+      var hobies = document.getElementsByName("hob");
+      // hobies 是一个input对象数组
+      for (var i = 0; i < hobies.length; i++) {
+        hobies[i].checked = true;
+      }
+    }
+    function funNo() {
+      var hobies = document.getElementsByName("hob");
+      // hobies 是一个input对象数组
+      for (var i = 0; i < hobies.length; i++) {
+        hobies[i].checked = false;
+      }
+    }
+    function funFan() {
+      var hobies = document.getElementsByName("hob");
+      // hobies 是一个input对象数组
+      for (var i = 0; i < hobies.length; i++) {
+        if (hobies[i].checked){
+          hobies[i].checked = false;
+        }else{
+          hobies[i].checked = true
+        }
+
+      }
+    }
+
+  </script>
+</head>
+<body>
+  兴趣爱好：
+  <input name="hob" type="checkbox" value="cpp">C++
+  <input name="hob" type="checkbox" value="java">Java
+  <input name="hob" type="checkbox" value="js">JavaScript
+  <br/>
+  <button onclick="funAll()">全选</button>
+  <button onclick="funNo()">全不选</button>
+  <button onclick="funFan()">反选</button>
+
+</body>
+</html>
