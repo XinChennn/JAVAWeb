@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    function onchangeFun(){
+      alert("城市改变了")
+    }
+
+    window.onload = function (){
+      //获取id对应的值对象
+      var elementById = document.getElementById("sel");
+      //动态注册onchange事件
+      elementById.onchange = function (){
+        alert("城市改变了")
+      }
+    }
+  </script>
+</head>
+<body>
+  <select onchange="onchangeFun()">
+    <option>--请选择城市--</option>
+    <option>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+    <option>深圳</option>
+  </select>
+
+  <select id="sel">
+    <option>--请选择城市--</option>
+    <option>北京</option>
+    <option>上海</option>
+    <option>广州</option>
+    <option>深圳</option>
+  </select>
+</body>
+</html>
