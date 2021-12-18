@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function submit(){
+            alert("提交......")
+        }
+
+        window.onload = function (){
+
+            //通过id获得按钮对象
+            var byId = document.getElementById("btn_submit");
+            byId.onclick = function (){
+                alert("提交.....")
+            }
+
+            var elementById = document.getElementById("btn_flash");
+            elementById.onclick = function (){
+                alert("刷新")
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <h1>用户注册</h1>
+    <table border="1" cellspacing="0">
+        <tr>
+            <td>账号：</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+<!--                单选框必须要给相同的名字   也就是分组    才能实现互斥   -->
+                <input type="radio" name="sex" value="man" checked="checked">男
+                <input type="radio" name="sex" value="woman">女
+            </td>
+        </tr>
+        <tr>
+            <td>爱好：</td>
+            <td>
+                <input type="checkbox" name="hob" value="sing">唱
+                <input type="checkbox" name="hob" value="dance" checked="checked">跳
+                <input type="checkbox" name="hob" value="rap">rap
+                <input type="checkbox" name="hob" value="basketball">篮球
+            </td>
+        </tr>
+
+        <tr>
+            <td>城市：</td>
+            <td>
+                <select>
+                    <option value="sanmenxia">三门峡</option>
+                    <option value="zhengzhou" selected="selected">郑州</option>
+                    <option value="luoyang">洛阳</option>
+                    <option value="shangqiu">商丘</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>个人介绍：</td>
+            <td>
+                <textarea name="info" cols="20" rows="5"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="提交" id="btn_submit">
+                <input type="button" value="重置">
+                <input type="button" value="刷新" id="btn_flash">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
