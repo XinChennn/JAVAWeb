@@ -2,3 +2,10 @@ document对象的三个查询方法，
 如果有id属性，优先使用getElementById方法来进行查询
 如果没有id属性，则优先使用getElementsByName方法来进行查询
 如果id属性和name属性都没有最后再按标签名查getElementsByTagName
+
+以上三个方法一定要在页面加载完成之后执行  才能查询到标签对象
+
+
+
+
+节点就是标签对象

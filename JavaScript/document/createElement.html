@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+  @author xin_chen  ^_^
+  
+  @date 2021-12-22 16:46
+  
+  @description:  创建节点加入文字
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    window.onload = function (){
+
+      //创建节点
+      var divObj = document.createElement("div");   //在内存中，<div></div>
+
+
+      var textNodeObj = document.createTextNode("忻辰，我爱你");  //文本节点对象
+
+      divObj.appendChild(textNodeObj);  //  <div>忻辰，我爱你</div>
+//说明标签里的文字也是节点
+
+
+      // divObj.innerHTML = "忻辰，我爱你";  //内存中显示：<div>忻辰，我爱你</div>
+
+
+      //document.body :获取body对象
+      // appendChild():   添加子元素
+      document.body.appendChild(divObj);
+
+
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
